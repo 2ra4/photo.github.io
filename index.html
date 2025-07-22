@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チェキカメラ - Instax Camera</title>
+    <!-- Tailwind CSS CDNを読み込みます。これにより、追加のCSSファイルを必要とせずにTailwindのクラスを使用できます。 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fontsから「Inter」フォントを読み込みます。 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全体のフォントと背景色、文字色を設定します。 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* 明るい背景色 */
+            color: #1f2937; /* 暗い文字色 */
+        }
+        /* コンテンツの最大幅を設定し、中央に配置します。 */
+        .container {
+            max-width: 1200px;
+        }
+        /* セクションのタイトルに色と影を設定します。 */
+        .section-title {
+            color: #ef4444; /* 赤みがかったオレンジ色 */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        /* カード要素のスタイルを設定します。 */
+        .card {
+            background-color: #ffffff; /* 白いカード背景 */
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        /* ボタンのスタイルとホバー時のトランジションを設定します。 */
+        .button {
+            background-color: #ef4444; /* 赤みがかったオレンジ色のボタン */
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #dc2626; /* ホバー時に濃い赤みがかったオレンジ色に変化 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col items-center py-8 px-4">
+        <!-- ヘッダーセクション: ページタイトルとサブタイトルを表示します。 -->
+        <header class="w-full bg-white text-center py-6 rounded-lg shadow-lg mb-8">
+            <h1 class="text-5xl font-bold section-title">チェキカメラ</h1>
+            <p class="text-xl text-gray-600 mt-2">撮ったら、すぐに出る。 Instax Camera</p>
+        </header>
+
+        <!-- メインコンテンツセクション -->
+        <main class="container w-full flex-grow">
+            <!-- ヒーローセクション: チェキカメラの紹介文と「モデルを見る」ボタンを配置します。 -->
+            <section class="mb-12 text-center">
+                <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                    チェキカメラは、撮ったその場で写真がプリントされるインスタントカメラです。
+                    デジタルでは味わえない、プリントアウトされた写真の温かみと、その瞬間の感動をすぐに共有できるのが魅力。
+                    パーティー、旅行、日常のふとした瞬間を、形に残る思い出として手軽に楽しめます。
+                </p>
+                <a href="#models" class="button px-8 py-3 rounded-full font-bold text-lg inline-block hover:scale-105 transform transition-transform duration-200">
+                    モデルを見る
+                </a>
+            </section>
+
+            <!-- チェキの魅力セクション: チェキの様々な特徴をカード形式で表示します。 -->
+            <section class="mb-12">
+                <h2 class="text-4xl font-bold section-title text-center mb-8">チェキの魅力</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">撮ってすぐプリント</h3>
+                        <p class="text-gray-600">
+                            シャッターを切って数秒後には、目の前で写真がプリントされます。デジタルでは得られない、唯一無二の体験です。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">簡単な操作</h3>
+                        <p class="text-gray-600">
+                            複雑な設定は不要。電源を入れてシャッターを押すだけで、誰でも簡単に美しい写真を撮ることができます。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">思い出を共有</h3>
+                        <p class="text-gray-600">
+                            プリントされた写真は、その場で友達や家族に手渡して共有できます。SNSとは違う、リアルな繋がりが生まれます。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">アナログな風合い</h3>
+                        <p class="text-gray-600">
+                            チェキ独特の色合いや質感は、デジタル写真にはない温かみとノスタルジーを感じさせます。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">豊富なデザイン</h3>
+                        <p class="text-gray-600">
+                            カラフルでスタイリッシュな本体デザインや、様々なフレームのフィルムがあり、自分らしいチェキを楽しめます。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">創造性を刺激</h3>
+                        <p class="text-gray-600">
+                            デコレーションやコラージュなど、プリントされた写真でさらにクリエイティブな楽しみ方が広がります。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 主なモデルセクション: チェキの主要なモデルを紹介します。 -->
+            <section id="models" class="mb-12">
+                <h2 class="text-4xl font-bold section-title text-center mb-8">主なモデル</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">instax miniシリーズ</h3>
+                        <p class="text-gray-600">
+                            手のひらサイズで持ち運びやすく、名刺サイズの写真がプリントされます。豊富なカラーバリエーションが魅力。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">instax SQUAREシリーズ</h3>
+                        <p class="text-gray-600">
+                            正方形のフォーマットで、アート作品のような写真を撮りたい方に最適です。レトロな雰囲気が人気。
+                        </p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">instax WIDEシリーズ</h3>
+                        <p class="text-gray-600">
+                            ワイドな写真が撮れるので、集合写真や風景写真にぴったり。迫力のある一枚を残せます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッターセクション: 著作権表示と商標に関する注意書きを表示します。 -->
+        <footer class="w-full bg-gray-100 text-center py-6 mt-8 rounded-lg shadow-lg">
+            <p class="text-gray-500 text-sm">&copy; 2025 チェキカメラファンページ. All rights reserved.</p>
+            <p class="text-gray-500 text-sm mt-1">「チェキ」は富士フイルム株式会社の登録商標です。</p>
+        </footer>
+    </div>
+</body>
+</html>
